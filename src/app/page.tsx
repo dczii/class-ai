@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import * as motion from "motion/react-client";
 
-import AnimatedText from "@/components/AnimatedText";
-
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
