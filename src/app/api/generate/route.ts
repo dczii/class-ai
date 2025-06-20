@@ -1,10 +1,10 @@
-import OpenAI from "openai";
+// import OpenAI from "openai";
 import { NextResponse } from "next/server";
 
-const client = new OpenAI({
-  apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
-  dangerouslyAllowBrowser: true,
-});
+// const client = new OpenAI({
+//   apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
+//   dangerouslyAllowBrowser: true,
+// });
 
 export async function POST(req: Request) {
   const body = await req.json();
@@ -14,7 +14,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Missing level or section" }, { status: 400 });
   }
 
-  const prompt = `Act as a school administrator creating a class schedule for a school management system. The class starts at 8am and ends at 3pm. Generate a detailed weekly plan schedule from Monday to Friday with ${levels} levels, and each level have ${sections} Section. each section should have different class schedule and table should be for each section.`;
+  // const prompt = `Act as a school administrator creating a class schedule for a school management system. The class starts at 8am and ends at 3pm. Generate a detailed weekly plan schedule from Monday to Friday with ${levels} levels, and each level have ${sections} Section. each section should have different class schedule and table should be for each section.`;
 
   // const response = await client.responses.create({
   //   model: "gpt-4.1-nano",
